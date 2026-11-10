@@ -1,12 +1,14 @@
 📊 Etsy Market Analyzer
-A full-stack Chrome extension and API backend designed to provide Etsy sellers with data-driven insights, listing optimization intelligence, and estimated sales velocity using the official Etsy v3 API.
+A personal, self-hosted market research tool designed to provide data-driven insights, listing optimization intelligence, and estimated sales velocity using the official Etsy Open API v3.
+
+This application is built strictly for individual use to aggregate public marketplace trends and assist in shop optimization, ensuring full compliance with platform data security and API usage guidelines.
 
 Architecture
-This project is split into two distinct environments to safely bypass browser CORS restrictions, secure API credentials, and manage heavy computational tasks without degrading browser performance.
+This project is split into two distinct environments to safely bypass browser CORS restrictions, secure API credentials, and manage computational tasks without degrading browser performance.
 
-Frontend (/extension): A Manifest V3 Chrome Extension built with React and Vite. It utilizes a Shadow DOM overlay to isolate its UI from Etsy's native styles and relies on a background service worker to communicate securely with the local backend.
+Frontend (/extension): A Manifest V3 Chrome Extension built with React and Vite. It utilizes a Shadow DOM overlay to isolate its UI from native page styles and relies on a background service worker to communicate securely with the local backend.
 
-Backend (/backend): A Python FastAPI server that acts as the computation engine. It securely stores the Etsy API Keystring, handles concurrent API requests to Etsy's v3 endpoints, and executes the Review-to-Sales estimation algorithm.
+Backend (/backend): A self-hosted Python FastAPI server that acts as the computation engine. It securely stores your personal API Keystring, handles rate-limited concurrent API requests to official v3 endpoints, and executes statistical market analysis.
 
 Prerequisites
 Node.js & npm (for building the Chrome extension)
