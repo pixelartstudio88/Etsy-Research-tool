@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Etsy Market Analyzer",
+  "version": "1.0",
+  "description": "Extracts Etsy search data and calculates estimated sales velocity.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.etsy.com/*",
+    "http://127.0.0.1:8000/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.etsy.com/search*", 
+        "*://*.etsy.com/market*"
+      ],
+      "js": ["src/content.jsx"] 
+    }
+  ],
+  "action": {
+    "default_title": "Open Analyzer",
+    "default_popup": "public/popup.html"
+  }
+}

@@ -1,0 +1,29 @@
+/* App.css */
+table th {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Custom Scrollbar for the slide-out panel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1; 
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8; 
+}
